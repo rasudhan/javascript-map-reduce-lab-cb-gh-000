@@ -9002,4 +9002,8 @@ const issues = [
 ];
 
 
-const issuesWithUpdatedApiUrl
+const issuesWithUpdatedApiUrl=issues.map(issue=>{
+  return Object.assign({},issue,{
+    url: issue.url.replace('api.github.com','api-v2.github.com')
+  })
+})
